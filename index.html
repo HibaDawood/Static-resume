@@ -58,14 +58,14 @@
                         <h4>Univercity</h4>
                     </li>
                     <li>
-                        <h5>year -year</h5>
+                        <h5>2020 -2022</h5>
                         <h4>12 <sub>th</sub> </h4>
-                        <h4>School / College<h4>
+                        <h4>CMS higher secondry college<h4>
                     </li>
                     <li>
-                        <h5>year -year</h5>
+                        <h5>2018 -2020</h5>
                         <h4>10 <sub>th</sub> </h4>
-                        <h4>School</h4>
+                        <h4>CMS higher secondry school</h4>
                     </li>
                 </ul>
             </div>
@@ -157,12 +157,14 @@
             </div>
         </div>
 
-        <div class="about skills">
+
+        <button id="toggleSkillsBtn">Show Skills</button>     
+        <div class="about skills" id="skillsSection" >
             <h2 class="title2">Professional skills</h2>
             <div class="box">
                 <h4>HTML</h4>
                 <div class="percent">
-                    <div style="width: 93%;"></div>
+                    <div style="width: 100%;"></div>
                 </div>
             </div>
             <div class="box">
@@ -174,13 +176,13 @@
             <div class="box">
                 <h4>Typescript</h4>
                 <div class="percent">
-                    <div style="width: 70%;"></div>
+                    <div style="width: 75%;"></div>
                 </div>
             </div>
             <div class="box">
                 <h4>Next.js</h4>
                 <div class="percent">
-                    <div style="width: 45%;"></div>
+                    <div style="width: 80%;"></div>
                 </div>
             </div>
         </div>
@@ -202,7 +204,37 @@
 </div>
 
 
-</body>
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</html>
+
+<script>
+    
+    const toggleSkillsBtn = document.getElementById('toggleSkillsBtn');
+    const skillsSection = document.getElementById('skillsSection');
+
+    toggleSkillsBtn.addEventListener('click', () => {
+        if (skillsSection.style.display === 'none' || !skillsSection.style.display) {
+            skillsSection.style.display = 'block';
+            toggleSkillsBtn.textContent = 'Hide Skills';
+            
+        } else {
+            skillsSection.style.display = 'none';
+            toggleSkillsBtn.textContent = 'Show Skills';
+        }
+    });
+
+
+    skillsSection.style.display = 'none';
+</script>
+
+
+
+</body>
+</html> 
+
+
+
+
+
+
